@@ -35,3 +35,27 @@ firstName='LightSeid'
 console.log(firstName)
 const lastName = 'Ebuka'
 console.log(lastName)
+function greet(){
+    console.log('good morning')
+}
+greet()
+function sum(){
+    const x=2
+    const y=3
+    const result = x+y
+    return result
+    // return x+y
+}
+// console.log(x)
+// console.log(sum())
+const x = 2
+const y = 3
+function sum(){
+    console.log(x)
+    console.log(y)
+}
+sum()
+const multiply =()=>{
+    return 2*3
+}
+console.log(multiply())
