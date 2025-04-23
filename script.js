@@ -59,3 +59,25 @@ const multiply =()=>{
     return 2*3
 }
 console.log(multiply())
+function modulus(num1,num2){
+    return num1 % num2
+}
+console.log(modulus(5,2))
+function negative(num1){
+    return !num1
+}
+console.log(negative(false))
+function find(x,y,z){
+    return x||y&&z
+}
+console.log(find(true,false,true))
+function greatPeople(...persons){
+    return persons
+}
+console.log(greatPeople('dami','praise','precious','Barokah'))
+
+function greatpeople(greetings,surname,...persons){
+    // return persons.map((person)=> greetings+ " " + person)
+    return persons.map((person)=> `${greetings} ${person} ${surname}`)
+}
+console.log(greatpeople("Good morning","Abeke",'dami','praise','precious','Barokah'))
