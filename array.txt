@@ -1,0 +1,44 @@
+/*
+ARRAYS
+*/
+
+const studentNames = ['gbenga','alex','motunde']
+console.log(studentNames)
+
+studentNames.push('Moses')       // added to the last of the list
+console.log(studentNames)
+
+studentNames.unshift('Dan')
+console.log(studentNames)        // added to the first in the row and shift others
+
+studentNames.splice(2,0,'Dru')
+console.log(studentNames)        // to add to the middle of the list
+
+studentNames.pop()               // to remove element at the back from an array
+console.log(studentNames)
+
+studentNames.shift()             // to remove element at the beginning from an array
+console.log(studentNames)
+
+studentNames.splice(2,1)          // to remove element at the middle from an array    where 2 is the position and 1 is the number of element to delete
+console.log(studentNames)
+
+console.log(studentNames[0])           // to get the position number of an element in an array
+
+const animals = ['goat','dog','dog','cat']
+console.log(animals[0])
+
+console.log(animals.indexOf('dog'))     // to get the first position number of an element in an array
+
+console.log(animals.lastIndexOf('dog'))     // to get the last position number of an element in an array
+
+// combining Arrays
+
+const numb = [2,3,4]
+const phone = ['android','iPhone']
+
+const comb = numb.concat(phone)            //first method
+console.log(comb)
+
+spreadComb = [...numb,...phone]            //second method
+console.log(spreadComb)
