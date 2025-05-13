@@ -115,40 +115,72 @@ human.isShort = true;
 console.log(human);
 delete human.Complexion;
 console.log(human)
-function calcAreaOfTraiangle(base,heigth){
+function calcAreaOfTraiangle(base, heigth) {
     let a = base;
     let b = heigth;
-    return (a/2)*b
+    return (a / 2) * b
 }
-console.log(calcAreaOfTraiangle(5,10))
-const tertiaryInstitution ={
-    School:"Unilorin",
-    Location:"Kwara State",
-    Faculty:"Physical Sciences",
-    Department:{
+console.log(calcAreaOfTraiangle(5, 10))
+const tertiaryInstitution = {
+    School: "Unilorin",
+    Location: "Kwara State",
+    Faculty: "Physical Sciences",
+    Department: {
         main_dept: "Geology and Mineral Science",
-        sub_dept:"Engineering Geology"
+        sub_dept: "Engineering Geology"
     }
 }
 console.log(tertiaryInstitution.Department.sub_dept)
-const{Department:{main_dept,sub_dept},School,Location,Faculty}=tertiaryInstitution;
+const { Department: { main_dept, sub_dept }, School, Location, Faculty } = tertiaryInstitution;
 console.log(sub_dept)
 
-function list(...a){
+function list(...a) {
     return a
 }
-const humanArr = list('Dayo','Sayo','David')
-const petArr = list('Snake','Cat','Dog')
-const combine = [...humanArr,...petArr]
+const humanArr = list('Dayo', 'Sayo', 'David')
+const petArr = list('Snake', 'Cat', 'Dog')
+const combine = [...humanArr, ...petArr]
 console.log(combine)
 // Emptying an Array
 // const studentNames = ['Dayo','Sayo','Davis']  //1st method
-let studentNames = ['Dayo','Sayo','Davis'] //2nd method and 3rd method
+let studentNames = ['Dayo', 'Sayo', 'Davis'] //2nd method and 3rd method
 // studentNames.splice(0 ,studentNames.length) //1st
 // studentNames = []  //2nd
 // studentNames.length = 0  //3rd method
 // console.log(studentNames)
 
 // SCILING AN ARRAY
-const slicedArr = studentNames.slice(0,2)
+const slicedArr = studentNames.slice(0, 2)
 console.log(slicedArr)
+
+// ITERATING ELEMENTS OF AN ARRAY - forEach method:listing one element one after another
+studentNames.forEach((el) => {
+    console.log(`${el} money`)
+})
+
+//JOINING AN ARRAY
+console.log(studentNames.join())
+
+//write a function that reverses a string *hint:using function,stringobject,joininganarray
+
+// Mappping An Array
+const larvaStudentNames = ['Ayo', 'Sayo', 'Gbemi', 'Caro']
+const mapStudentArr = larvaStudentNames.map((al) => {
+    return `Good morning, ${al}`
+})
+console.log(mapStudentArr)
+
+// Reducing An Array - anytime to perform expression with all and every element within an array is called reduction
+const normArr = [3,4,1,2,6,10,11]
+// const reducedArr = normArr.reduce((a,b)=> a*b) //or (a,b)=>{return a+b}
+// console.log(reducedArr) 
+//Other method are some(),every(),from()
+const someArr = normArr.some((norm)=>{
+     return norm>15 //norm%2===0
+     })
+console.log(someArr)
+const everyArr = normArr.every((norm)=>{
+    return norm > 6
+})
+console.log(everyArr) //Data Structure and Algorithm, System Design read at leisure!!
+// function that return an array that combines static and dynamic data
